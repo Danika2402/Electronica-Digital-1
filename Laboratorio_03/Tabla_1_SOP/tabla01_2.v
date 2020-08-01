@@ -30,6 +30,6 @@ initial begin
 	#1 B=1; C=0;
 	#1 C=1;
 	#1 $finish;
-	end 
+end 
 
 endmodule
