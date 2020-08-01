@@ -32,4 +32,10 @@ initial begin
 	#1 $finish;
 end 
 
+initial 
+	begin
+		$dumpfile("tabla01_2_tb.vcd");
+		$dumpvars(0,tabla01_2);
+	end
+
 endmodule

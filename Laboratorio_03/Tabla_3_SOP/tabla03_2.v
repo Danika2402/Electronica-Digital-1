@@ -45,5 +45,11 @@ initial begin;
 	#1 D=1;
 	#1 $finish;
 end
+
+initial 
+	begin
+		$dumpfile("tabla03_2_tb.vcd");
+		$dumpvars(0,tabla03_2);
+	end
 	
 endmodule
