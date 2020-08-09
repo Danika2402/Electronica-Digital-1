@@ -47,7 +47,9 @@ initial begin
 
 //tabla 2
 initial begin
-	
+
+		#10
+		$display("\n\n");	
 		$display("B | Y");
 		$display("--|--");
 		$monitor("%b | %b",p4,led2);
@@ -60,7 +62,9 @@ initial begin
 
 //tabla 3
 initial begin
-		
+
+		#20
+		$display("\n\n");
 		$display("A B C D | Y");
 		$display("--------|--");
 		$monitor("%b %b %b %b | %b",p5,p6,p7,p8,led3);
@@ -87,7 +91,8 @@ initial begin
 
 //tabla 4
 initial begin
-		
+		#30
+		$display("\n\n");
 		$display("A B C D | Y");
 		$display("--------|--");
 		$monitor("%b %b %b %b | %b",p9,p10,p11,p12,led4);
@@ -114,7 +119,8 @@ initial begin
 
 //tabla 1_2
 initial begin 
-
+		#40
+		$display("\n\n");
 		$display("A B C D | Y");
 		$display("--------|--");
 		$monitor("%b %b %b %b | %b",p13,p14,p15,p16,led5);
@@ -140,7 +146,8 @@ initial begin
 	
 //tabla 2_2
 initial begin
-
+		#50
+		$display("\n\n");
 		$display("B C | Y");
 		$display("----|--");
 		$monitor("%b %b | %b",p17,p18,led6);
@@ -155,7 +162,8 @@ initial begin
 //tabla 3_2
 initial begin
 
-		
+		#60
+		$display("\n\n");
 		$display("A B C D | Y");
 		$display("--------|--");
 		$monitor("%b %b %b %b | %b",p19,p20,p21,led7);
@@ -173,7 +181,8 @@ initial begin
 	
 //tabla 4_2
 initial begin
-
+		#70
+		$display("\n\n");
 		$display("B C | Y");
 		$display("----|--");
 		$monitor("%b %b | %b",p22,p23,led8);
@@ -182,5 +191,14 @@ initial begin
 		#1 p22=0;p23=1;	
 		#1 p22=1;p23=0;
 		#1 p22=1;p23=1;
-
+		#1 $finish
 	end
+	
+	
+initial begin
+		$dumpfile("Modulos_tb.vcd");
+		$dumpvars(0,testbench);
+	
+	end
+
+endmodule
