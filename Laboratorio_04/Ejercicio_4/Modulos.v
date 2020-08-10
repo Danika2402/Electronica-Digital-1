@@ -1,10 +1,9 @@
-
 //EJERCICIO I
 
 //Ecuación Y=(~A*~C)+(A*~B)+(AC), tabla #1
 //gateLevel
 
-module tabla_1(input wire A,B,C, output Y);
+module tabla_1(input wire A,B,C, output wire Y);
 
 	wire w1,w2,w3,w4,w5,w6;
 	
@@ -22,7 +21,7 @@ endmodule
 //Ecuación Y =~B, tabla #2
 //gateLevel
 
-module tabla_2(input wire B, output Y);
+module tabla_2(input wire B, output wire Y);
 	
 	not (Y,B);
 	
@@ -34,8 +33,7 @@ endmodule
 
 module tabla_3(input A,B,C,D, output wire Y);
 
-	assign Y=(~A & ~B & ~C & ~D)|(A & B & ~C & ~D)|(~A & B & ~C & D)|(A & ~B & ~C & D)|
-			 (~A & ~B & C & D)|(A & B & C & D)|(~A & B & C & ~D)|(A & ~B & C & ~D);
+	assign Y=(~A & ~B & ~C & ~D)|(A & B & ~C & ~D)|(~A & B & ~C & D)|(A & ~B & ~C & D)|(~A & ~B & C & D)|(A & B & C & D)|(~A & B & C & ~D)|(A & ~B & C & ~D);
 	
 endmodule
 	
@@ -48,14 +46,14 @@ module tabla_4(input wire A,B,C,D, output wire Y);
 	
 endmodule
 	
-//-------------------------------------------------------------------------------------------------
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 //EJERCICIO II
 
 //Ecuación Y=(~B*~C*~D)+(A*~C)+(A*~B)+(A*C*~D), tabla #1
 //gateLevel
 
-module tabla_1_2(input A,B,C,D output wire Y);
+module tabla_1_2 (input wire A,B,C,D, output wire Y);
 
 	wire w1,w2,w3,w4,w5,w6,w7;
 	
@@ -75,7 +73,7 @@ endmodule
 //Ecuación Y= -B + C, tabla #2
 //gateLevel
 
-module tabla_2_2(input A,B,C, output wire Y);
+module tabla_2_2(input wire B,C, output wire Y);
 
 	wire w1;
 	
@@ -87,7 +85,7 @@ endmodule
 //Ecuación Y=B+D+C*D, tabla #3
 //operadores 
 
-module tabla_3_2(input A,B,C,D, output wire Y);
+module tabla_3_2(input wire B,C,D, output wire Y);
 
 	assign Y= B | D | (C & D);
 	
@@ -96,7 +94,7 @@ endmodule
 //Ecuación Y= ~C + B, tabla #4
 //operadores
 
-module tabla_4_2(input A,B,C, output wire Y);
+module tabla_4_2(input wire B,C, output wire Y);
 
 	assign Y= ~C | B;
 	
