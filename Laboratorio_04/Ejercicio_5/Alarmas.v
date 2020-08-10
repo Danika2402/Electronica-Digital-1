@@ -43,7 +43,7 @@ module Karnaug(input wire A,B,C, output wire Y);
 wire w1,w2;
 
 	and (w1,A,B);
-	and (w2,AC);
+	and (w2,A,C);
 	
 	or (Y,w1,w2);
 

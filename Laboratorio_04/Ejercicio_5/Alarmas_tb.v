@@ -1,7 +1,7 @@
 
 module Simulacion();
 
-	reg p1,p2,p3,p4,p5,p6,p7,p8;
+	reg p1,p2,p3,p4,p5,p6,p7,p8,p9;
 	wire led1,led2,led3;
 	
 	SOP S(p1,p2,p3,led1);
