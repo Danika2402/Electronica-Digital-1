@@ -1,7 +1,7 @@
 
 //Solución SOP
 //gateLevel
-module SOP_gate(input wire A,B,C, output wire Y);
+module SOP(input wire A,B,C, output wire Y);
 
 wire w1,w2,w3,w4,w5;
 	
@@ -18,7 +18,7 @@ endmodule
 
 //Solución POS
 //gateLevel
-module POS_gate(input wire A,B,C, output wire Y);
+module POS(input wire A,B,C, output wire Y);
 
 wire w1,w2,w3,w4,w5,w6,w7,w8;
 	
@@ -38,7 +38,7 @@ endmodule
 
 //Solución Karnaug
 //gateLevel
-module Karnaug_gate(input wire A,B,C, output wire Y);
+module Karnaug(input wire A,B,C, output wire Y);
 
 wire w1,w2;
 
