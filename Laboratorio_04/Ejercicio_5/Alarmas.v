@@ -49,3 +49,29 @@ wire w1,w2;
 
 endmodule
 
+//Solución SOP
+//operadores
+
+module SOP_operadores(input wire A,B,C, output wire Y);
+
+	assign Y= (A & ~B & C)|(A & B & ~C)|(A & B & C);
+	
+endmodule
+
+//Solución POS 
+//operadores
+
+module POS_operadores(input wire A,B,C, output wire Y);
+
+	assign Y=(A|B|C)&(A|B|~C)&(A|~B|C)&(A|~B|~C)&(~A|B|C);
+	
+endmodule
+
+//Solución Karnaug
+//operadores
+
+module Karnaug_operadores(input wire A,B,C, output wire Y);
+
+	assign Y=(A&B)|(A&C);
+	
+endmodule
