@@ -1,4 +1,4 @@
-module tesbench();
+module testbench();
 
 	reg p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18;
 	wire led1,led2,led3,led4,led5,led6;
@@ -126,4 +126,13 @@ module tesbench();
 	#1 p16=1;p17=1;p18=1;
 	
 	end
+	
+	initial begin
+		$dumpfile("Module_tb.vcd");
+		$dumpvars(0,testbench);
+	
+	end
+	initial 
+	#140 $finish;
+
 endmodule
