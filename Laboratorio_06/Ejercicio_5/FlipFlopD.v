@@ -1,9 +1,10 @@
-module ffd4(input wire clk,input wire reset,input wire set, input wire [3:0]d, output wire [3:0]q);
+module ffd4(input clk, reset, set, input [1:0]d, output  reg[1:0]q);
 
-always @(posedge clk, posedge reset)
+always @(posedge clk or posedge reset) 
 
-	if (reset) q<=4'b0000;
-	else if (set) q<=4'b0001;
-	else q<= d;
+	if (reset==1) 
+		q<=4'b00;
+	else if (set==1) q<=4'b01;
+		else q<= d;
 	
 endmodule
