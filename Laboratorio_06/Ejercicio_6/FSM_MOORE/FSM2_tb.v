@@ -13,13 +13,13 @@ initial begin
 	clk=0;
 	reset=0;
 	a=1;
-	#5
+	#20
 	#1 reset =1;
 	#1 reset =0;
 	#2 reset =1;
 	#2 reset =0;
 	a=0;
-	#5
+	#10
 	#1 reset =1;
 	#1 reset =0;
 	#2 reset =1;

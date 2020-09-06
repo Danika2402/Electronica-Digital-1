@@ -21,6 +21,7 @@ always@ (*)
 	case(state)
 		e0: if(a==1) nextstate=e1;
 		else nextstate =e7;
+
 		
 		e1: if(a==1) nextstate=e2;
 		else nextstate =e0;
@@ -46,9 +47,9 @@ always@ (*)
 		default nextstate = e0;
 	endcase
 		
-		assign y1=(state== e4 & e5 & e6 & e7);
-		assign y2 =(state == e2 & e3 & e4 & e5);
-		assign y3 =(state == e1 & e2 & e5 & e6);
+		assign y1 =(state== e4) | (state==e5) | (state==e6) | (state==e7);
+		assign y2 =(state == e2) | (state==e3) | (state==e4) | (state==e5);
+		assign y3 =(state == e1) | (state==e2) | (state==e5) | (state==e6);
 
 
 endmodule
