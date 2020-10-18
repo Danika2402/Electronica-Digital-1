@@ -7,7 +7,7 @@ FSM_Moore U2(clk, reset,a,y1,y2,y3);
 
 initial begin 
 	$display("clk reset A | Y1 Y2 Y3");
-	$display("----------------|--");
+	$display("------------|---------");
 	$monitor("%b    %b   %b  | %b %b %b ",clk,reset,a,y1,y2,y3);
 	
 	clk=0;

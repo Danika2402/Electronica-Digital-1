@@ -22,7 +22,6 @@ always@ (*)
 		e0: if(a==1) nextstate=e1;
 		else nextstate =e7;
 
-		
 		e1: if(a==1) nextstate=e2;
 		else nextstate =e0;
 		
